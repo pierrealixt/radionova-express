@@ -1,2 +1,25 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<table>
+  <thead>
+    <tr>
+      <th>Artist</th>
+      <th>Title</th>
+      <th>Google</th>
+      <th>youtube_id</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ count }}</td>
+    </tr>
+    <tr>
+      <td>{{track.artist}}</td>
+      <td>{{track.title}}</td>
+      <td><a target="_blank" href="{{ track.url }}">google</a></td>
+      <td>
+        <form hx-patch="track/{{track.id }}">
+          <input type="text" name="youtube_id"/>
+          <input type="submit" value="s"/>
+        </form>
+      </td>
+    </tr>
+  </tbody>
+</table>

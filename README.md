@@ -1,1 +1,1 @@
-`DEBUG=radionova-express:\* npm start`
+`DEBUG=radionova-express:\* npm run start:dev`
